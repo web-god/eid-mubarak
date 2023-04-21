@@ -154,12 +154,12 @@ section h1::before {
     }
 
     .mosque {
-        min-height: 180px;
+        min-height: 200px;
         background-size: 290px;
     }
 
     .mosque:before {
-        min-height: 200px;
+        min-height: 300px;
         background-size: 465px;
     }
 }
