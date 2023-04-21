@@ -133,6 +133,20 @@ section h1::before {
         animation-direction: alternate;
     }
 
+    section h1::before {
+        content:'';
+        position: absolute;
+        left:-50px;
+        top:-60px;
+        width:50px;
+        height:60px;
+        border-left:15px solid #ddd;
+        border-radius:50px ;
+        background: transparent;
+        transform: rotate(-20deg);
+    
+    }
+
     @keyframes floating {
         0%{
             left:49%;
