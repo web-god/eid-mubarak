@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: tangerine;
+    src: url("/fonts/Tangerine/Tangerine-Bold.ttf");
+}
+
+body{
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+section{
+    position: absolute;
+    left:50%;
+    top:25%;
+    transform:translate(-50%,0%);
+    animation: floating 5s linear infinite;
+    animation-direction: alternate;
+
+}
+
+section h1{
+    font-size: 150px;
+    color:#fff;
+    font-family: tangerine;
+    text-shadow:-9px 10px 1px #2322226b;
+    position: relative;
+}
+
+section p{
+    font-size: 40px;
+    font-weight: 900;
+    color:#510e4c;
+    padding-left: 220px;
+    font-family: tangerine;
+    position: relative;
+}
+
+section h1::before {
+    content:'';
+    position: absolute;
+    left:-100px;
+    top:-180px;
+    width:200px;
+    height:100px;
+    border-left:15px solid #ddd;
+    border-radius:50px ;
+    background: transparent;
+    transform: rotate(-20deg);
+
+}
+
+@keyframes floating {
+    0%{
+        left:49%;
+    }
+    25%{
+        top:24%;
+    }
+    75%{
+        left:51%;
+    }
+    100%{
+        top:26%;
+    }
+}
+
+.mosque{
+    background-image: url(img/mosque.png);
+    min-height: 200px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 580px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    animation: anim 25s linear infinite;
+
+}
+
+.mosque:before{
+    content: " ";
+    background-image: url(img/mosque.png);
+    min-height: 300px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 930px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    opacity:.5;
+    animation: anim 25s linear infinite;
+    animation-direction: reverse;
+}
+
+
+@keyframes anim {
+    0%{
+        background-position: -100px;
+    }
+    100%{
+        background-position: 1600px;
+    }
+}
+
+.particles-js-canvas-el{
+    position:absolute;
+    left:0;
+    top:0;
+    min-height:80v;
+}
